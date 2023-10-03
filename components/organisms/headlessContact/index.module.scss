@@ -1,0 +1,131 @@
+.headlessContact {
+    .background1 {
+        background: linear-gradient(180deg, $backgroundColor 53%, #FFF 47%);
+    }
+    .background2 {
+        background: linear-gradient(180deg, #FFF 49%, $backgroundColor 49%);
+    }
+    .background3 {
+        background: #fff;
+    }
+    &-wrap {
+        min-height: 360px;
+        background: url('/images/headlessContact/background.png') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        gap: 45px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 65px;
+    }
+    &__text{
+        h2 {
+            margin-bottom: 13px;
+            font-size: 34px;
+            line-height: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            span {
+                font-family: $inter;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+        }
+        .describe {
+            color: #fff;
+            font-weight: 500;
+            line-height: 2em;
+            white-space: pre-wrap;
+        }
+    }
+    &__button {
+        .wakka_btn {
+            color: #1987c2;
+            background-color: #fff;
+
+        }
+        .wakka_btn span::after {
+            background-image: url(/images/button-icon-v2.png);
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .headlessContact {
+        &-wrap {
+            gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .headlessContact {
+        &-wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__button {
+            padding-top: 0;
+            padding-bottom: 40px;
+        }
+        &__text{
+            padding-top: 40px;
+            padding-left: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .headlessContact {
+        &-wrap {
+            padding: 0 25px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .headlessContact {
+        .background3 {
+            background: linear-gradient(180deg, #FFF 49%, #f0f1f2 49%);
+        }
+        &-wrap {
+            gap: 15px;
+            padding: 0 26px;
+        }
+        &__text {
+            h2 {
+                display: inline-block;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-bottom: 12px;
+                font-size: 22px;
+                line-height: 1.5em;
+                letter-spacing: .5px;
+                span {
+                    letter-spacing: .5px;
+                }
+                br {
+                    display: none;
+                }
+                padding: 0;
+            }
+            .describe {
+                padding: 0;
+                line-height: 1.8em;
+                font-size: 14px;
+                white-space: normal;
+                br {
+                    display: none;
+                }
+            }
+        }
+        &__button {
+            width: 100%;
+            padding-bottom: 40px;
+        }
+    }
+}

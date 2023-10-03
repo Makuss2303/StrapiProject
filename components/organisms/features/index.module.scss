@@ -1,0 +1,130 @@
+.feature {
+    padding-top: 190px;
+    padding-bottom: 147px;
+    background-color: #fff;
+    &-list {
+        padding-top: 56px;
+    }
+    &-item {
+        display: flex;
+        padding-bottom: 25px;
+        justify-content: space-between;
+        gap: 75px;
+        figure {
+            position: relative;
+            width: 420px;
+            height: auto;
+            margin-bottom: 10px;
+            img {
+                border-radius: 10px;
+            }
+        }
+        &__text {
+            flex: 1;
+            padding-top: 32px;
+            &-titleWrap {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+            &-order {
+                font-family: $inter;
+                font-size: 108px;
+                color: $mainColor;
+                line-height: 1.3em;
+                font-weight: 500;
+            }
+            &-title {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 1.6em;
+                color: $fontColor;
+                margin-bottom: 0;
+                margin-top: 7px;
+                span {
+                    background: linear-gradient(transparent 70%,rgba(25,135,194,.29) 0);
+                }
+            }
+            &-describe {
+                line-height: 1.75em;
+                font-weight: bold;
+                padding-left: 7px;
+                white-space: pre-wrap;
+            }
+        }
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .feature {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        &-item {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 60px;
+            figure {
+                width: 504px;
+            }
+            &:nth-child(odd) {
+                gap: 0;
+            }
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+            &__text {
+                padding-top: 10px;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .feature {
+        padding-top: 84px;
+        padding-bottom: 66px;
+        .wakka_title {
+            padding: 0 20px;
+        }
+        &-list {
+            padding-top: 38px;
+        }
+        &-item {
+            padding-bottom: 35px;
+            figure {
+                width: 100%;
+            }
+            &__text {
+                padding-top: 0;
+                &-order {
+                    font-size: 81px;
+                    line-height: 1.3em;
+                }
+                &-titleWrap {
+                    gap: 10px;
+                    margin-bottom: 7px;
+                }
+                &-title {
+                    font-size: 18px;
+                    line-height: 1.6em;
+                }
+                &-describe {
+                    padding-left: 0;
+                    font-size: 14px;
+                    line-height: 1.8em;
+                    letter-spacing: .5px;
+                    br {
+                        display: none;
+                    }
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

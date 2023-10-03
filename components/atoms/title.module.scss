@@ -1,0 +1,27 @@
+.centerText {
+    display: flex;
+    justify-content: center;
+}
+.wakka_title {
+    padding-bottom: 20px;
+    color: $fontColor;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    span {
+        color: $mainColor;
+        letter-spacing: 2px;
+    }
+    border-bottom: solid $mainColor 2px;
+}
+
+@media only screen and (max-width: 575px) {
+    .wakka_title {
+        font-size: 24px;
+        line-height: 42px;
+        text-align: center;
+        text-decoration: underline 1px $mainColor;
+        text-underline-offset: 10px;
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,108 @@
+.development {
+    padding-top: 178px;
+    &-list {
+        display: flex;
+        padding-top: 60px;
+        gap: 45px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &-item {
+        width: calc((100% - 90px)/3);
+        &:hover {
+            opacity: $opacity;
+        }
+        text-decoration: none;
+        figure {
+            position: relative;
+            width: 100%;
+            height: auto;
+            img {
+                border-radius: 10px;
+            }
+        }
+        &__company {
+            color: #7d878c;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 1.3em;
+            color: $fontColor;
+            font-weight: bold;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+        &__category {
+            width: 100%;
+            display: flex;
+            column-gap: 15px;
+            row-gap: 5px;
+            flex-wrap: wrap;
+            color: #7d878c;
+            font-weight: 500;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .development {
+        &-list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .development {
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .development {
+        padding-top: 83px;
+        &-list {
+            padding-top: 22px;
+            gap: 47px;
+        }
+        &-item {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            figure {
+                width: 103px;
+                height: 69px;
+                margin-bottom: 0;
+                img {
+                    border-radius: 5px;
+                }
+            }
+            &__textWrap {
+                flex: 1;
+            }
+            &__company {
+                font-size: 12px;
+                line-height: 1em;
+                margin-bottom: 5px;
+            }
+            &__title {
+                font-size: 14px;
+                line-height: 1.4em;
+                margin-bottom: 5px;
+                br {
+                    display: none;
+                }
+            }
+            &__category {
+                font-size: 10px;
+                text-decoration: none;
+            }
+        }
+    }
+}

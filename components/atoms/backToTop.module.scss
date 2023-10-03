@@ -1,0 +1,42 @@
+.backToTop {
+    display: none;
+    position: fixed;
+
+    &.show {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 6;
+    cursor: pointer;
+    background-color: $mainColor;
+    border: none;
+    border-radius: 100%;
+
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+
+    svg {
+        width: 12px;
+        height: 16px;
+        path {
+            fill: #fff;
+        }
+    }
+    &:hover {
+        opacity: .8;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .backToTop {
+        width: 36px;
+        height: 36px;
+        right: 15px;
+        bottom: 15px;
+    }
+}

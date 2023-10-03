@@ -1,0 +1,123 @@
+.advantages {
+    padding-bottom: 163px;
+    &-list {
+        display: flex;
+        gap: 65px;
+        padding-top: 55px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &-item {
+        figure {
+            position: relative;
+            width: 298px;
+            height: auto;
+            margin-bottom: 40px;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                width: 54px;
+                height: 54px;
+                bottom: -25px;
+
+                color: #fff;
+                font-weight: bold;
+                font-family: $inter;
+
+                z-index: 2;
+                background: #364d59;
+                border-radius: 100%;
+            }
+        }
+        &__title {
+            font-size: 18px;
+            color: $fontColor;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            br {
+                display: none;
+            }
+        }
+        &__describe {
+            line-height: 1.6em;
+            font-weight: 500;
+            color: $fontColor;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .advantages {
+        &-list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .advantages {
+        padding-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .advantages {
+        padding-bottom: 88px;
+        &-list {
+            padding-top: 20px;
+            gap: 33px;
+        }
+        &-item {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 55px;
+            max-width: 375px;
+            figure {
+                width: 119px;
+                margin-bottom: 0;
+                span {
+                    left: unset;
+                    bottom: unset;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: -44px;
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+            &__title {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                line-height: 1.3em;
+                margin-bottom: 0;
+                text-align: left;
+                br {
+                    display: block;
+                }
+            }
+            &__describe {
+                width: 100%;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 1.8em;
+                padding-top: 14px;
+                br {
+                    display: none;
+                }
+                white-space: normal;
+            }
+        }
+    }
+}

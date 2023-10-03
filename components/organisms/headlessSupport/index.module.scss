@@ -1,0 +1,209 @@
+.headlessSupport {
+    background-color: #fff;
+    padding-top: 177px;
+    &-moreinfo {
+        margin-top: 30px;
+        margin-bottom: 57px;
+        color: $fontColor;
+        text-align: center;
+        font-weight: bold;
+        br {
+            display: none;
+        }
+    }
+    &-list {
+        display: flex;
+        gap: 65px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    figure {
+        position: relative;
+        width: 118px;
+        height: 119px;
+        margin-bottom: 18px;
+        img {
+            object-fit: contain;
+        }
+    }
+    &-item {
+        width: calc((100% - 130px)/3);
+        &__image {
+            display: flex;
+            justify-content: center;
+        }
+        &__title {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: $fontColor;
+            font-weight: bold;
+            line-height: 1.2em;
+            text-align: center;
+        }
+        &__describe {
+            padding-bottom: 19px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: #7d878c;
+            line-height: 1.5em;
+            border-bottom: solid $fontColor 1px;
+            word-break: break-word;
+        }
+        &__example {
+            padding-bottom: 6px;
+            margin-bottom: 13px;
+            font-weight: bold;
+            line-height: 1.8em;
+            text-align: center;
+            color: $fontColor;
+            border-bottom: solid $fontColor 1px;
+        }
+        &__pricing {
+            display: flex;
+            justify-content: center;
+            column-gap: 26px;
+            .price {
+                word-break: break-word;
+                h4 {
+                    color: #7d878c;
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                }
+                span:nth-child(2) {
+                    color: $mainColor;
+                    font-size: 39px;
+                    font-weight: bold;
+                    font-family: $inter;
+                    line-height: 1em;
+                    margin-right: 5px;
+                }
+                span:nth-child(3) {
+                    color: $fontColor;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .period {
+                word-break: break-word;
+                h4 {
+                    color: #7d878c;
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                }
+                span:nth-child(2) {
+                    color: $mainColor;
+                    font-size: 39px;
+                    font-weight: bold;
+                    font-family: $inter;
+                    line-height: 1em;
+                    margin-right: 5px;
+                }
+                span:nth-child(3) {
+                    color: $fontColor;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .headlessSupport {
+        background-color: #fff;
+        padding-top: 70px;
+        &-moreinfo {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            color: $fontColor;
+            text-align: center;
+            font-weight: bold;
+        }
+        &-list {
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 400px;
+            gap: 35px;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .headlessSupport {
+        .container {
+            max-width: 375px;
+        }
+        padding-top: 82px;
+        .wakka_title {
+            padding: 0 10px;
+        }
+        &-moreinfo {
+            margin-top: 34px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            line-height: 1.8em;
+            br {
+                display: block;
+            }
+        }
+        &-list {
+            flex-direction: column;
+            padding: 0 30px;
+            gap: 42px;
+        }
+        &-item {
+            width: 100%;
+            &__title {
+                font-size: 16px;
+                line-height: 1.25em;
+                margin-bottom: 12px;
+            }
+            &__describe {
+                font-size: 14px;
+                line-height: 1.5em;
+                padding-bottom: 18px;
+                margin-bottom: 8px;
+                p {
+                    br {
+                        display: none;
+                    }
+                    white-space: normal;
+                }
+            }
+            &__example {
+                font-size: 14px;
+                line-height: 1.3em;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            &__pricing {
+                .price, .period {
+                    flex-direction: row;
+                    padding-left: 0;
+                    flex-wrap: wrap;
+                    h4 {
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                    span:nth-child(2) {
+                        font-size: 35px;
+                    }
+                    span:nth-child(3) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        figure {
+            width: 105px;
+            height: 105px;
+        }
+    }
+}
+

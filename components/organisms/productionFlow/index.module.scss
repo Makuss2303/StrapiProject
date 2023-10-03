@@ -1,0 +1,157 @@
+.productionFlow {
+    padding-top: 175px;
+    padding-bottom: 140px;
+    &-list {
+        max-width: 840px;
+        margin: 0 auto;
+        padding-top: 73px;
+    }
+    &-item{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 41px;
+        align-items: center;
+        &__image {
+            position: relative;
+            width: 109px;
+            height: 109px;
+            margin-left: 10px;
+            margin-bottom: 0;
+            img {
+                object-fit: contain;
+            }
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                font-family: $inter;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                width: 41px;
+                height: 41px;
+                border-radius: 100%;
+                background-color: $fontColor;
+                z-index: 1;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -28px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 26px;
+                height: 14px;
+                background: url('/images/productionFlow/icon-next.png');
+                z-index: 1;
+            }
+        }
+        &__text {
+            flex: 1;
+            color: $fontColor;
+            padding-top: 5px;
+            &-title {
+                margin-bottom: 8px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            &-describe {
+                white-space: pre-wrap;
+                line-height: 1.8em;
+            }
+        }
+        &__describe {
+            display: none;
+        }
+    }
+    &-item:last-child {
+        .productionFlow-item__image::after  {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .productionFlow {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        &-list {
+            padding-top: 50px;
+        }
+        
+        &-item:last-child {
+            margin-bottom: 0;
+        }
+        &-item {
+            &__image {
+                &::after {
+                    display: none;
+                }
+            }
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 12px;
+                left: 52px;
+                width: 26px;
+                height: 14px;
+                background: url(/images/productionFlow/icon-next.png);
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .productionFlow {
+        padding-top: 100px;
+        &-list {
+            padding-top: 30px;
+        }
+        &-item {
+            flex-wrap: wrap;
+            gap: 0;
+            column-gap: 20px;
+            &::after {
+                bottom: -14px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            &__image {
+                width: 84px;
+                height: 84px;
+                margin-left: 6px;
+                span {
+                    width: 32px;
+                    height: 32px;
+                    font-size: 14px;
+                    left: -6px;
+                }
+            }
+            &__text {
+                display: flex;
+                align-items: center;
+                &-title {
+                    font-size: 18px;
+                }
+                &-describe {
+                    display: none;
+                }
+            }
+            &__describe {
+                padding-top: 8px;
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                line-height: 1.8em;
+                font-weight: 600;
+            }
+        }
+    }
+}

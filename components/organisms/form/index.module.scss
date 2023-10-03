@@ -1,0 +1,49 @@
+#form {
+  padding-top: 175px;
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+.form {
+  display: flex;
+  padding-top: 55px;
+  gap: 50px;
+  &-describe {
+    flex: 1;
+    color: $fontColor;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 5px;
+    line-height: 1.9em;
+  }
+  &-input {
+    width: 515px;
+
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #form {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .form {
+    justify-content: center;
+    &-describe {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #form {
+    background-color: #f0f1f2;
+    padding-bottom: 50px;
+    padding-top: 81px;
+    .wakka_title {
+      padding-bottom: 10px;
+    }
+  }
+  .form {
+    padding-top: 0;
+  }
+}
