@@ -20,9 +20,9 @@ async function getDataMainVisual() {
   const res = await axios
     .get("main-visual", {params: {populate:'*'}})
     .then((response) => {
-      if (typeof response.data === "object" && response.data !== null) {
+
         data = response.data.data?.attributes
-      }
+      
     })
     .catch(function (error) {
       console.log(error)
@@ -33,7 +33,7 @@ async function getDataMainVisual() {
 async function getDataCTA() {
   let data = {}
   const res = await axios
-  .get("cta-banner", {params: {populate:'*'}})
+  .get("cta-banner", {params: {populate:'*'}},)
     .then((response) => {
       if (typeof response.data === "object" && response.data !== null) {
         data = response.data.data?.attributes
