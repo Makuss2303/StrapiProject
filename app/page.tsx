@@ -15,14 +15,16 @@ import Faq from "@/components/organisms/faq"
 import Form from "@/components/organisms/form"
 import axios from "@/utils/axios"
 
+export const revalidate = 1 //make requests will be subject to revalidation after a certain period
+
 async function getDataMainVisual() {
   let data = {}
   const res = await axios
     .get("main-visual", {params: {populate:'*'}})
     .then((response) => {
-
+      if (typeof response.data === "object" && response.data !== null) {
         data = response.data.data?.attributes
-      
+      }
     })
     .catch(function (error) {
       console.log(error)
@@ -45,9 +47,45 @@ async function getDataCTA() {
   return data
 }
 
+type ImageProps = {
+  data: {
+    attributes: {
+      url: string
+    }
+  },
+}
+
+type ButtonProps = {
+  linkText: string
+  linkURL: string
+  targetBlank: boolean
+}
+
+type MainVisualProps = {
+  mainImage: ImageProps
+  mainTitle: string
+  subTitle: string
+  text: string
+  button: ButtonProps
+  outlineImage: ImageProps
+  outlineHeading: string
+  outlineText: string
+}
+
+type CTAProps = {
+  title: string
+  text: string
+  button: ButtonProps
+  ctaMainVisual: boolean
+  ctaIntro: boolean
+  ctaStructureMerit: boolean
+  ctaFeature: boolean
+  ctaFaq: boolean
+}
+
 export default async function Home() {
-  const data: any = await getDataMainVisual()
-  const dataCTA: any = await getDataCTA()
+  const data = await getDataMainVisual() as MainVisualProps
+  const dataCTA = await getDataCTA() as CTAProps
   return (
     <>
       <MainVisual data={data} />
