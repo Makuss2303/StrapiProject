@@ -6,7 +6,7 @@ const nextConfig = {
     importer: globImporter(),
   },
   images: {
-    domains: ['127.0.0.1', 'dev-strapi.wds.com.vn'],
+    domains: ['dev-strapi.wds.com.vn'],
   },
 }
 
